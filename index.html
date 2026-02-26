@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vihar Organics - Pure & Natural Ayurvedic Care</title>
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+<link rel="apple-touch-icon" href="logo.jpeg">
+<meta name="description" content="Vihar Organics is a trusted organic store in Neyveli offering fresh organic groceries, natural food products, and healthy living essentials. Quality organic products for a healthier lifestyle in Neyveli.">
+<meta name="keywords" content="Vihar Organic Neyveli, organic store in Neyveli, organic groceries Neyveli, natural food store Neyveli, organic vegetables Neyveli, healthy food Neyveli, organic products Tamil Nadu">
+<meta name="geo.region" content="IN-TN">
+<meta name="geo.placename" content="Neyveli">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="logo.jpeg" alt="Vihar Organics logo" class="brand-logo-image" />
+        <span class="brand-text">Vihar Organics</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <button class="cart-btn" id="cart-btn" aria-label="View cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+
+      <!-- Mobile menu toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">100% Natural &amp; Handmade</div>
+        <h1 class="hero-title">Pure &amp; Natural Ayurvedic Care</h1>
+        <p class="hero-subtitle">
+          Experience the goodness of Vihar Organics — handcrafted herbal products inspired by ancient Ayurvedic traditions.
+        </p>
+        <button class="btn-primary" id="shop-now-btn">Shop Now</button>
+      </div>
+    </section>
+
+    <!-- About / Features Section -->
+    <section id="about" class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nature's Best, For You</h2>
+          <p>
+            At Vihar Organics, we blend traditional Ayurvedic wisdom with carefully sourced natural ingredients to bring you
+            high-quality herbal care.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🌿</div>
+            <h3>100% Natural</h3>
+            <p>Pure ingredients sourced from nature with no synthetic additives.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👐</div>
+            <h3>Handmade</h3>
+            <p>Each product is carefully handcrafted with love and precision.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚫</div>
+            <h3>Chemical Free</h3>
+            <p>No parabens, sulfates, or harmful chemicals — ever.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🕉️</div>
+            <h3>Ayurvedic Inspired</h3>
+            <p>Rooted in ancient Ayurvedic wisdom for holistic wellness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Shop Our Products</h2>
+          <p>Explore our handcrafted herbal products for skin, hair, and body care.</p>
+        </div>
+
+        <div id="product-grid" class="product-grid">
+          <!-- Product cards injected by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart & Checkout Overlay (right side) -->
+    <section id="cart-overlay" class="cart-overlay hidden" aria-hidden="true">
+      <div class="cart-panel">
+        <div class="cart-panel-header">
+          <h2>Your Cart</h2>
+          <button id="cart-close-btn" class="cart-close-btn" type="button" aria-label="Close cart">×</button>
+        </div>
+
+        <div class="cart-panel-body">
+          <div id="cart-items">
+            <p class="cart-empty">Your cart is empty.</p>
+          </div>
+
+          <div class="cart-summary">
+            <span>Grand Total:</span>
+            <span id="cart-total">₹0</span>
+          </div>
+
+          <button id="clear-cart-btn" class="btn-outlined cart-clear-btn" type="button">Clear Cart</button>
+
+          <div class="cart-divider"></div>
+
+          <h3 class="checkout-title">Customer Details</h3>
+          <form id="checkout-form" class="checkout-form">
+            <div class="form-group">
+              <label for="customer-name">Name</label>
+              <input type="text" id="customer-name" required />
+            </div>
+            <div class="form-group">
+              <label for="customer-phone">Phone Number</label>
+              <input
+                type="tel"
+                id="customer-phone"
+                name="phone"
+                inputmode="numeric"
+                pattern="[6-9][0-9]{9}"
+                maxlength="10"
+                placeholder="Enter 10-digit Indian mobile number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="customer-address">Address</label>
+              <textarea id="customer-address" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width">Place Order via WhatsApp</button>
+            <p class="checkout-note">
+              Your order details will open in WhatsApp. Please review and confirm your order there.
+            </p>
+          </form>
+
+          <button type="button" class="cart-back-btn" id="cart-back-btn">
+            ← Back to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>Have questions or need help choosing the right product? We are here to help.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">💬</div>
+            <h3>WhatsApp</h3>
+            <p>Chat with us for quick support and product recommendations.</p>
+            <a href="https://wa.me/918610555736" target="_blank" class="link">Start Chat</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3>Phone</h3>
+            <p>Call us at</p>
+            <p class="contact-strong">+91 8610555736</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h3>Location</h3>
+            <p>Neyveli, Tamil Nadu, India</p>
+            <p>Serving customers across India with love and care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp Button -->
+  <a
+    href="https://wa.me/918610555736"
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="Chat on WhatsApp"
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp"
+      class="floating-whatsapp-icon"
+    />
+  </a>
+  <a href="https://www.instagram.com/viharorganics221107"
+   target="_blank"
+   class="instagram-float"
+   aria-label="Instagram">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+       alt="Instagram"
+       width="48"
+       height="48">
+</a>
+
+<style>
+.instagram-float {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1000;
+}
+.instagram-float img {
+  display: block;
+}
+</style>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Vihar Organics. All rights reserved. Made with ❤️ and herbs.</p>
+      
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
