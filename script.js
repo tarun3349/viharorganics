@@ -5,7 +5,7 @@ const baseProducts = [
     name: "Centella Asiatica with Shea Butter Soap",
     description:
       "Nourishing herbal soap enriched with Centella and shea butter for deep hydration and skin repair.",
-    price: 120,
+    price: 150,
     image: "butter.jpeg",
   },
   {
@@ -21,7 +21,7 @@ const baseProducts = [
     name: "Kuppaimeni Soap",
     description:
       "Ayurvedic soap known for soothing skin irritation and improving skin texture.",
-    price: 110,
+    price: 150,
     image: "kuppameni.jpeg",
   },
   {
@@ -29,7 +29,7 @@ const baseProducts = [
     name: "Strawberry Lip Balm",
     description:
       "Hydrating lip balm with natural strawberry extract for soft, smooth lips.",
-    price: 99,
+    price: 200,
     image: "lipbalm.jpeg",
   },
   {
@@ -37,8 +37,16 @@ const baseProducts = [
     name: "Vegan Lip Balm",
     description:
       "Plant-based lip balm enriched with coconut and almond oils for deep nourishment.",
-    price: 99,
+    price: 200,
     image: "lipbalm2.jpeg",
+  },
+  {
+    id: "beetroot-lip-balm",
+    name: "Beetroot Lip Balm",
+    description:
+      "Nourishing lip balm with beetroot extract for a natural tint and soft, hydrated lips.",
+    price: 250,
+    image: "beetroot .jpeg",
   },
   {
     id: "kumkumadi-oil",
@@ -61,7 +69,7 @@ const baseProducts = [
     name: "Goat Milk with Manjistha Soap",
     description:
       "Gentle cleansing soap with goat milk and manjistha for brighter skin.",
-    price: 130,
+    price: 200,
     image: "soap1.jpeg",
   },
   {
